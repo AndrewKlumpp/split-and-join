@@ -1,5 +1,12 @@
 function initials(name) {
+  let splits = name.split(" ");
+  let firstLetters = [];
 
+  for (let i = 0; i < splits.length; i++) {
+    let split = splits[i];
+    firstLetters.push(split[0].toUpperCase());
+  }
+  return firstLetters.join('');
 };
 
 
