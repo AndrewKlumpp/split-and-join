@@ -1,5 +1,19 @@
-function snakeToCamel(str) {
+// this problem has an error in the instructions
+// instead of snakeToCamel this should be snakeToPascal
+// PascalCase retains capitalization on first word
+// camelCase uncapitalizes the first letter of the first word
 
+function snakeToCamel(str) {
+  let words = str.split('_');
+  let pascal = [];
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let newWord = word[0].toUpperCase() + word.slice(1).toLowerCase();
+    pascal.push(newWord);
+  }
+
+  return pascal.join('');
 };
 
 
