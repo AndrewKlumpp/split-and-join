@@ -1,6 +1,13 @@
 function containsWord(sentence, targetWord) {
-
-}
+  let words = sentence.split(' ');
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i].toLowerCase();
+    if (word === targetWord) {
+      return true;
+    }
+  }
+  return false;
+};
 
 
 console.log(containsWord('sounds like a plan', 'like')); // true
