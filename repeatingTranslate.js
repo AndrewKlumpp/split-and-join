@@ -40,6 +40,13 @@ let lastCharVowel = function(word) {
     return word + word
   }
 
+  for (let i = word.length - 1; i >= 0; i--) {
+    let letter = word[i];
+    if (vowels.includes(letter)) {
+      return word + word.slice(i);
+    }
+  }
+
   return word;
 };
 
