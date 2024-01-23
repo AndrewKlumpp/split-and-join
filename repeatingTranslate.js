@@ -21,9 +21,26 @@ let repeatingTranslate = function(sentence) {
 
   for (let i = 0; i < words.length; i++) {
     let word = words[i];
-    translated.push()
+
+    if (word.length >= 3) {
+    translated.push(lastCharVowel(word));
+    } else {
+      translated.push(word);
+      }
   }
   return translated.join(' ');
+};
+
+let lastCharVowel = function(word) {
+
+  let vowels = 'aeiou';
+  let lastLetter = word[word.length - 1];
+
+  if (vowels.includes(lastLetter)) {
+    return word + word
+  }
+
+  return word;
 };
 
 
